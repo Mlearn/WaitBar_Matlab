@@ -18,7 +18,7 @@
 - BarType：进度条类型（Bar-矩形、Pie-圆形）；
 - FillColor：进度条填充颜色，接收标准Matlab颜色表达；
 - Alpha：可以设置进度条填充颜色透明度，范围0-1；
-- BorderStyle：进度条边框种类（'none'无边框|'-'实线|'--'虚线|'：'点虚线|'-.'点划线）
+- BorderStyle：进度条边框种类（'none'无边框 | '-'实线 | '--'虚线 | ':'点虚线 | '-.'点划线）
 - BorderColor：设置边框线的颜色，接收标准Matlab颜色表达；
 - Position：进度条在父对象中的位置，接收normalized参数，标准Matlab位置表达；
 - Steps：进度条的阶数，默认100，也就是最小变化间隔为1/100；
