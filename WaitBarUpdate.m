@@ -34,11 +34,11 @@ WaitBarStruct.BorderColor = BorderColor;
 BarType = WaitBarStruct.BarType;
 Steps = WaitBarStruct.Steps;
 vv = [];
-if strcmpi('Bar',BarType)% 画长方形进度条
+if strcmpi('Bar',BarType)
     p = floor(WaitBarStruct.Percent*Steps)+1;
     vv = [1,p,Steps+1+p,Steps+2];
 end
-if strcmpi('Pie',BarType)% 画圆形进度条
+if strcmpi('Pie',BarType)
     RealSteps = WaitBarStruct.RealSteps;
     p = floor(floor(Percent*Steps)*(RealSteps/Steps))+1;
     vv = [1,2:p+1,1];

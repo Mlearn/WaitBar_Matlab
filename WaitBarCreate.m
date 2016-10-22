@@ -63,7 +63,7 @@ WaitBarStruct.Steps = Steps;
 WaitBarStruct.Position = PosiSize;
 BCorners = []; vv = [];
 WaitBarStruct.axes = axes('Parent',ParentHandle, 'Position',PosiSize,'Box','off', 'XLim',[0 1],'YLim',[0 1],'XTick',[],'YTick',[],'Visible','off');
-if strcmpi('Bar',BarType)% 画长方形进度条
+if strcmpi('Bar',BarType)
     if strcmpi('lr', ChangeType)
     BCorners = [linspace(0,1,Steps+1)',zeros(Steps+1,1);linspace(0,1,Steps+1)',ones(Steps+1,1)];
     elseif strcmpi('rl', ChangeType)
@@ -80,7 +80,7 @@ if strcmpi('Bar',BarType)% 画长方形进度条
         set(WaitBarStruct.axes,'XTick',[],'YTick',[],'Visible','off');
     end
 end
-if strcmpi('Pie',BarType)% 画圆形进度条
+if strcmpi('Pie',BarType)
     set(WaitBarStruct.axes,'DataAspectRatio',[1,1,1]);
     WaitBarStruct.RealSteps = 500;
     R = 0.5;
