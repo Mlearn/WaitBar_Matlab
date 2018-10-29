@@ -1,18 +1,20 @@
 # WaitBar
 
-一个Matlab程序，类似官方waitbar()函数功能，创建一个进度条图形对象。
+一个 Matlab 程序，类似官方 `waitbar()` 函数功能，创建一个进度条图形对象，可以更自由的控制该对象出现的位置和表现行为。
 
 ## 特性
 
-- 通过设置'Parent'参数可以把进度条嵌入到指定的父图形对象中去，包括figure、uipanel、uitab、axes
-- 可以选择进度条种类（目前支持矩形、圆形）
-- 可以指定进度条变化的方向（矩形支持四个方向，圆形支持两个方向）
+- 通过设置 'Parent' 参数可以把进度条嵌入到指定的父图形对象中去，包括 figure、uipanel、uitab、axes；
+- 可以选择进度条种类（目前支持矩形、圆形）；
+- 可以指定进度条变化的方向（矩形支持四个方向，圆形支持两个方向）。
 
 ## 使用
 
-把WaitBarCreate.m以及WaitBarUpdate.m拷贝到目前工作路径下即可。
+### 1. 把 *WaitBarCreate.m* 以及 *WaitBarUpdate.m* 文件拷贝到工作路径。
 
-### h = WaitBarCreate('PropertyName', propertyvalue)：创建进度条对象，可接收参数名字以及值：
+### 2. 创建进度条对象
+
+在需要 waibar 的地方调用方法 h = WaitBarCreate('PropertyName', propertyvalue)，返回进度条对象句柄。创建对象时可以设置其特性，可接收的参数名字以及值：
 
 - Parent：想要进度条嵌入进去的图形对象，如不设置，自动创建新窗口；
 - BarType：进度条类型（Bar-矩形、Pie-圆形）；
@@ -25,15 +27,16 @@
 - Percent：进度，[0-1]闭区间；
 - ChangeType：变化方式，矩形可选lr-左到右，rl-右到左，bt-底到上，tb-上到底；圆形可选'lr'-顺时针，'rl'-逆时针。
 
+### 3. 进度条进度更新
 
-### WaitBarCreate(h, 'PropertyName', propertyvalue,)：更新进度条
+ 在需要更新进度的地方调用 WaitBarCreate(h, 'PropertyName', propertyvalue,)。
 
 - 第一个参数必须WaitBarCreate()函数的返回值；
 - 可以更新的参数名字包括'FillColor','Alpha','Alpha','BorderStyle','BorderColor','Percent';
 
-### WaitBarTest()
+## 测试举例
 
-一个小的演示程序，调用了WaitBarCreate()和WaitBarCreate().
+运行 *WaitBarTest()* 可以看到两个进度条的实现示例。
 
 ## License
 
