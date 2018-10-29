@@ -2,6 +2,8 @@
 
 一个 Matlab 程序，类似官方 `waitbar()` 函数功能，创建一个进度条图形对象，可以更自由的控制该对象出现的位置和表现行为。
 
+![示例](./ExampleShow.gif)
+
 ## 特性
 
 - 通过设置 'Parent' 参数可以把进度条嵌入到指定的父图形对象中去，包括 figure、uipanel、uitab、axes；
