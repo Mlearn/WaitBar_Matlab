@@ -12,11 +12,11 @@
 
 ## 使用
 
-### 1. 把 *WaitBarCreate.m* 以及 *WaitBarUpdate.m* 文件拷贝到工作路径。
+### 1. 把 *WaitBarm* 文件拷贝到工作路径。
 
 ### 2. 创建进度条对象
 
-在需要 waibar 的地方调用方法 h = WaitBarCreate('PropertyName', propertyvalue)，返回进度条对象句柄。创建对象时可以设置其特性，可接收的参数名字以及值：
+在需要 waibar 的地方调用方法 h = WaitBar('PropertyName', propertyvalue)，返回进度条对象句柄。创建对象时可以设置其特性，可接收的参数名字以及值：
 
 - Parent：想要进度条嵌入进去的图形对象，如不设置，自动创建新窗口；
 - BarType：进度条类型（Bar-矩形、Pie-圆形）；
@@ -31,9 +31,9 @@
 
 ### 3. 进度条进度更新
 
- 在需要更新进度的地方调用 WaitBarCreate(h, 'PropertyName', propertyvalue,)。
+ 在需要更新进度的地方调用 h.Update('PropertyName', propertyvalue,)。
 
-- 第一个参数必须WaitBarCreate()函数的返回值；
+- 第一个参数必须WaitBar()函数的返回值；
 - 可以更新的参数名字包括'FillColor','Alpha','Alpha','BorderStyle','BorderColor','Percent';
 
 ## 测试举例
